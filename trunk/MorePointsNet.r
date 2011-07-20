@@ -7,6 +7,7 @@ while (summary(pts.est)[5]$npoints != n) pts.est <- spsample(inpol, 1.2*n, type)
 pts.est <- spsample(inpol, n, type)
 while (summary(pts.est)[5]$npoints != n) pts.est <- spsample(inpol, n, type)
 }
+#posible cambio
 return(pts.est)
 }
 
