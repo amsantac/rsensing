@@ -1,4 +1,5 @@
 netDesign <- function(inpol, n, type){
+#cambio de sincronizacion
 require(maptools)
 if(type=="hexagonal") {
 pts.est <- spsample(inpol, 1.2*n, type)
