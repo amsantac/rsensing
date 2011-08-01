@@ -1,0 +1,10 @@
+Package: melo
+Type: Package
+Title: esto hace el paquete
+Version: 0.0-1
+Date: 2011-07-19
+Author: cmelo
+Maintainer: cmelo <yourfault@somewhere.net>
+Description: esto hace mas
+License: licencia
+LazyLoad: yes
