@@ -1,6 +1,6 @@
-\name{melo_0.0-1-package}
-\alias{melo_0.0-1-package}
-\alias{melo_0.0-1}
+\name{geosp_0.0-1-package}
+\alias{geosp_0.0-1-package}
+\alias{geosp_0.0-1}
 \docType{package}
 \title{
 Rd esto hace
@@ -10,10 +10,10 @@ Rd descripcion
 }
 \details{
 \tabular{ll}{
-Package: \tab melo_0.0-1\cr
+Package: \tab geosp_0.0-1\cr
 Type: \tab Package\cr
 Version: \tab 0.0-1\cr
-Date: \tab 2011-07-19\cr
+Date: \tab 2011-08-01\cr
 License: \tab Rd licencia\cr
 LazyLoad: \tab yes\cr
 }
