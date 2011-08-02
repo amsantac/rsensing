@@ -38,7 +38,7 @@ valores retornados
 referencias
 }
 \author{
-cmelo
+Alí Santacruz <amsantac@unal.edu.co>
 }
 \note{
 notas
