@@ -1,4 +1,5 @@
 fbr <- function(sigma, var.reg, coordenadas, newdata, n.vec){
+#borrar
 xy <- coordenadas
 z <- var.reg
 So <- newdata                                                         
