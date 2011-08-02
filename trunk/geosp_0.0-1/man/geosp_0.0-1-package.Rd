@@ -29,8 +29,6 @@ Maintainer: maint <yourfault@somewhere.net>
 Rd referencias
 ~~ Literature 
 }
-~~ Optionally other standard keywords, one per line, from file KEYWORDS in ~~
-~~ the R documentation directory ~~
 \keyword{ package }
 \keyword{ spatial }
 \seealso{
