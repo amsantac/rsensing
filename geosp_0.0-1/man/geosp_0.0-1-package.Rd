@@ -1,6 +1,6 @@
-\name{geosp_0.0-1-package}
-\alias{geosp_0.0-1-package}
-\alias{geosp_0.0-1}
+\name{geosp-package}
+\alias{geosp}
+\alias{geosp}
 \docType{package}
 \title{
 Rd esto hace
@@ -10,20 +10,20 @@ Rd descripcion
 }
 \details{
 \tabular{ll}{
-Package: \tab geosp_0.0-1\cr
+Package: \tab geosp\cr
 Type: \tab Package\cr
 Version: \tab 0.0-1\cr
-Date: \tab 2011-08-01\cr
-License: \tab Rd licencia\cr
+Date: \tab 2011-08-02\cr
+License: \tab GPL (>= 2)\cr
 LazyLoad: \tab yes\cr
 }
 ~~ An overview of how to use the package, including the most important ~~
 ~~ functions ~~
 }
 \author{
-Rd melo
+Carlos E. Melo <cmelo@udistrital.edu.co>, Alí Santacruz <amsantac@unal.edu.co>
 
-Maintainer: Rd cmelo <yourfault@somewhere.net>
+Maintainer: maint <yourfault@somewhere.net>
 }
 \references{
 Rd referencias
@@ -35,7 +35,7 @@ Rd referencias
 \keyword{ spatial }
 \seealso{
 ~~ Optional links to other man pages, e.g. ~~
-~~ \code{\link[<pkg>:<pkg>-package]{<pkg>}} ~~
+~~ \code{\link{fbr}} ~~
 }
 \examples{
 8*4
