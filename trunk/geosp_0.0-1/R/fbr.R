@@ -1,5 +1,4 @@
-fbr <-
-function(sigma, var.reg, coordenadas, newdata, n.vec){
+fbr <- function(sigma, var.reg, coordenadas, newdata, n.vec){
 xy <- coordenadas
 z <- var.reg
 So <- newdata                                                         
