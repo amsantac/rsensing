@@ -1,20 +1,35 @@
-optimNet <-
-function(sigma, var.reg, coordenadas, newdata, n.vec){
-xy <- coordenadas
-z <- var.reg
-So <- newdata                                                         
-sigma <- sigma                                                        
-m.dist <- as.matrix(dist(rbind(xy,So)))                               
-dist.So <- m.dist[nrow(m.dist),1:(ncol(m.dist)-1)]                    
-vec.orden <- order(dist.So)                                           
-dist.vec.cerca <- dist.So[vec.orden[1:n.vec]]                         
-m.dist.vec <- as.matrix(dist(coordenadas))[vec.orden[1:n.vec], vec.orden[1:n.vec]]
-phi <- sqrt(m.dist.vec^2+ sigma^2)
-one = rep(1,nrow(phi))
-PHI.Matriz <- rbind(cbind(phi, one),c(one,0))
-PHI.Vector <- c(sqrt(dist.vec.cerca^2+ sigma^2),1)
-W.fbr<-solve(PHI.Matriz, PHI.Vector)
-FBR.pred <- W.fbr[-length(W.fbr)]%*%z[as.numeric(colnames(phi))]
-FBR.pred
+optimNet <- function(formula, locations, spDatF, fitmodel, n, popSize, generations, xmin, ymin, xmax, ymax){
+	
+	evaluate <- function(string=c()) {
+		returnVal = NA;
+		pts2 <- as.data.frame(matrix(0, ncol=2, nrow=n))
+#las x
+		for (i in 1:n){
+			pts2[i,1] <- round(string[i], 1)
+		}
+#las y
+		for (j in 1:n){
+			pts2[j,2] <- round(string[n + j], 1)
+		}
+		
+		names(pts2) <- c("x", "y")
+		coordinates(pts2) = c("x", "y")
+		
+#plot(lalib2Lines, xlim=c(bbox(lalib2Lines)[1],bbox(lalib2Lines)[3]), ylim=c(bbox(lalib2Lines)[2],bbox(lalib2Lines)[4]))
+#plot(pts.muestreo, pch=".", cex=2, add=T)
+#plot(pts2, add=T)
+		
+#interpolar sobre los nuevos puntos
+#kr <- krige(spVar~ 1, loc=~ x+y, data=spDatF, newdata=pts2, model=fitmodel) 
+		interp <- krige(formula, locations, data=spDatF, newdata=pts2, model=fitmodel)
+		
+#if(file.exists("Rplots.pdf")) file.remove("Rplots.pdf")
+		
+		returnVal <- sum(sqrt(interp[["var1.var"]]))/n
+		returnVal
+	}
+	
+	
+	results <- rbga(as.matrix(c(rep(xmin,n), rep(ymin, n))), as.matrix(c(rep(xmax,n), rep(ymax, n))), popSize=popSize, evalFunc=evaluate, verbose=TRUE, iters=generations)
 }
 
