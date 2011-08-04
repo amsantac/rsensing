@@ -8,11 +8,12 @@ titulo addPtsOptNetPlot
 descripcion addPtsOptNetPlot
 }
 \usage{
-addPtsOptNetPlot(map, formula, locations, spDatF, fitmodel, n, popSize, generations, xmin, ymin, xmax, ymax, ...)
+addPtsOptNetPlot(spMap, formula, locations, spDatF, fitmodel, n, popSize, 
+generations, xmin, ymin, xmax, ymax, ...)
 }
 
 \arguments{
-  \item{map}{
+  \item{spMap}{
 desc sigma
 }
   \item{formula}{

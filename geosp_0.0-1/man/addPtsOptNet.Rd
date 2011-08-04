@@ -8,7 +8,8 @@ titulo optimNet
 descripcion optimNet
 }
 \usage{
-addPtsOptNet(formula, locations, spDatF, fitmodel, n, popSize, generations, xmin, ymin, xmax, ymax, ...)
+addPtsOptNet(formula, locations, spDatF, fitmodel, n, popSize, 
+generations, xmin, ymin, xmax, ymax, ...)
 }
 
 \arguments{
