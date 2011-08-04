@@ -33,7 +33,7 @@ Rd referencias
 \keyword{ spatial }
 \seealso{
 ~~ Optional links to other man pages, e.g. ~~
-~~ \code{\link{fbr}} ~~
+~~ \code{\link{addPtsOptNet}} ~~
 }
 \examples{
 8*4
