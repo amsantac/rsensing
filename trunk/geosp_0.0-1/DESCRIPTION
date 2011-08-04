@@ -2,7 +2,7 @@ Package: geosp
 Type: Package
 Title: esto hace el paquete
 Version: 0.0-1
-Date: 2011-08-02
+Date: 2011-08-04
 Author: Carlos E. Melo <cmelo@udistrital.edu.co>, Alí Santacruz <amsantac@unal.edu.co>
 Maintainer: maint <yourfault@somewhere.net>
 Depends: R (>= 2.13.1), sp, gstat

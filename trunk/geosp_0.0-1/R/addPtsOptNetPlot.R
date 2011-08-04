@@ -1,4 +1,4 @@
-addPtsOptNetPlot <- function(map, formula, locations, spDatF, fitmodel, n, popSize, generations, xmin, ymin, xmax, ymax, ...){
+addPtsOptNetPlot <- function(spMap, formula, locations, spDatF, fitmodel, n, popSize, generations, xmin, ymin, xmax, ymax, ...){
 	evaluate <- function(string=c()) {
 		returnVal = NA;
 		pts2 <- as.data.frame(matrix(0, ncol=2, nrow=n))
@@ -10,7 +10,7 @@ addPtsOptNetPlot <- function(map, formula, locations, spDatF, fitmodel, n, popSi
 		}
 		names(pts2) <- c("x", "y")
 		coordinates(pts2) = c("x", "y")
-		plot(map, xlim=c(bbox(map)[1],bbox(map)[3]), ylim=c(bbox(map)[2],bbox(map)[4]), ...)
+		plot(spMap, xlim=c(bbox(spMap)[1],bbox(spMap)[3]), ylim=c(bbox(spMap)[2],bbox(spMap)[4]), ...)
 		plot(pts2, add=T)
 		interp <- krige(formula, locations, data=spDatF, newdata=pts2, model=fitmodel, ...)
 		returnVal <- sum(sqrt(interp[["var1.var"]]))/n
