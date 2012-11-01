@@ -2,7 +2,7 @@
 \alias{confMx}
 
 \title{
-Generate a SpatialPoints object corresponding to the best result obtained in an optimized network 
+Generate a SpatialPoints object corresponding to the best result obtained in an optimized  
 }
 \description{
 Generate a 
