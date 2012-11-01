@@ -1,0 +1,1 @@
+export(AIQImat, allocationAgree, allocationDisagree, AQstats, chanceAgree, confMx, figureMeritBooleanCase, Kallocation, Khisto, Kno, Kquantity, Kstandard, pierceSkillScoreBooleanCase, quantityAgree, quantityDisagree)
