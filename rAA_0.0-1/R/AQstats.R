@@ -23,7 +23,6 @@ gain <- ref2prop - persist
 
 gainIntens <- gain/ref2prop
 
-
 AIpQIn <- sum(min1prop)
 AIpQIm <- sum(min2prop)
 AIpQIp <- 1
