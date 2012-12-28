@@ -2,7 +2,7 @@ Package: rAA
 Type: Package
 Title: Accuracy assessment
 Version: 0.0-1
-Date: 2012-10-31
+Date: 2012-12-31
 Author: Robert G. Pontius <rpontius@clarku.edu>, Alí Santacruz
 Maintainer: Alí Santacruz <asantacruzdelgado@clarku.edu>
 Depends: R (>= 2.15.2)
