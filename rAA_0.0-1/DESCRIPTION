@@ -5,7 +5,7 @@ Version: 0.0-1
 Date: 2012-10-31
 Author: Robert G. Pontius <rpontius@clarku.edu>, Alí Santacruz
 Maintainer: Alí Santacruz <asantacruzdelgado@clarku.edu>
-Depends: R (>= 2.15.0)
+Depends: R (>= 2.15.2)
 Description: This package contains functions for assessment of accuracy
 License: GPL (>= 2)
 Encoding: latin1

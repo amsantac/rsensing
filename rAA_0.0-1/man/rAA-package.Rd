@@ -12,7 +12,7 @@ This package contains functions for assessment of accuracy}
 Package: \tab rAA\cr
 Type: \tab Package\cr
 Version: \tab 0.0-1\cr
-Date: \tab 2012-10-31\cr
+Date: \tab 2012-12-31\cr
 License: \tab GPL (>= 2)\cr
 LazyLoad: \tab yes\cr
 }
