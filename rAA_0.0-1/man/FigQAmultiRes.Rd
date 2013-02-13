@@ -24,6 +24,9 @@ a RasterLayer object defining the strata
   \item{seqn}{
 numeric vector indicating the sequence of contraction factors to adjust spatial resolution (pixel size) a los cuales se calculan los diferentes valores de Quantity Allocation
 }
+  \item{nullValue}{
+numeric vector indicating the sequence of contraction factors to adjust spatial resolution (pixel size) a los cuales se calculan los diferentes valores de Quantity Allocation
+}
 }
 \value{
 Las funciones que generan graficas, como esta, probablemente no van a tener esta seccion de Value
