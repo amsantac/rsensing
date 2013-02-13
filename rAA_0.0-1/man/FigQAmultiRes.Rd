@@ -1,11 +1,11 @@
 \name{FigQAmultiRes}
-\alias{FigQAmultiRes}
+\alias{Figure for Quantity Allocation at multi Resolution}
 
 \title{
-Generate a SpatialPoints object corresponding to the best result obtained in an optimized network 
+Quantity Allocation at multi-resolution 
 }
 \description{
-Generate a 
+This function determines the Quantity Allocation error at a multi-resolution.  The user must indicate the reference layer (x), the predicted layer (y), a mask defining the strata (mask), and establish the contraction factor (fact).  The output image shows the agreement in quantity between the reference and predicted layers.
 }
 \usage{
 FigQAmultiRes(x, y, mask, fact=2)
@@ -13,20 +13,20 @@ FigQAmultiRes(x, y, mask, fact=2)
 
 \arguments{
   \item{x}{
-object of class rbga resulting from 
+indicate reference raster layer.  The reference layer is taken as the 'truth' image.
 }
   \item{y}{
-object of class rbga resulting from 
+ indicate predicted raster layer
 }
   \item{mask}{
-object of class rbga resulting from 
+indicate raster layer to be used as a mask; this layer defines the strata 
 }
   \item{fact}{
-object of class rbga resulting from 
+indicate the contraction factor to adjust spatial resolution (pixel size) in output image
 }
 }
 \value{
-a SpatialPoints object
+output image
 }
 \seealso{
 See function 
@@ -38,4 +38,4 @@ See function
 #FigQAmultiRes(example_x1, example_y1, example_mask1, fact=2) 
 }
 
-\keyword{ spatial }
+\keyword{ spatial, quantity allocation }
