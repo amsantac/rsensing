@@ -8,7 +8,7 @@ Generate a SpatialPoints object corresponding to the best result obtained in an 
 Generate a 
 }
 \usage{
-QAmultiRes(x, y, mask, fact=2)
+QAmultiRes(x, y, stratum, seqn="geom", nullValue=0)
 }
 
 \arguments{
@@ -18,10 +18,13 @@ object of class rbga resulting from
   \item{y}{
 object of class rbga resulting from 
 }
-  \item{mask}{
+  \item{stratum}{
 object of class rbga resulting from 
 }
-  \item{fact}{
+  \item{seqn}{
+object of class rbga resulting from 
+}
+  \item{nullValue}{
 object of class rbga resulting from 
 }
 }
@@ -32,10 +35,11 @@ a SpatialPoints object
 See function 
 }
 \examples{
-#data(example_x1)
-#data(example_y1)
-#data(example_mask1)
-#QAmultiRes(example_x1, example_y1, example_mask1, fact=2) 
+library(raster)
+example_x1 <- raster(system.file("external/example_x1.rst", package="rAA")) 
+example_y1 <- raster(system.file("external/example_y1.rst", package="rAA")) 
+example_mask1 <- raster(system.file("external/example_mask1.rst", package="rAA")) 
+QAmultiRes(example_x1, example_y1, example_mask1, seqn="geom")
 }
 
 \keyword{ spatial }
