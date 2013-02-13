@@ -1,41 +1,42 @@
 \name{FigQAmultiRes}
-\alias{Figure for Quantity Allocation at multi Resolution}
+\alias{FigQAmultiRes}
 
 \title{
 Quantity Allocation at multi-resolution 
 }
 \description{
-This function determines the Quantity Allocation error at a multi-resolution.  The user must indicate the reference layer (x), the predicted layer (y), a mask defining the strata (mask), and establish the contraction factor (fact).  The output image shows the agreement in quantity between the reference and predicted layers.
+This function determines the Quantity Allocation error at a multi-resolution.  The user must indicate the reference layer (x), the predicted layer (y), a raster map defining the strata (stratum), and the sequence of contraction factors (seqn).  The output figure shows the agreement in quantity between the reference and predicted layers.
 }
 \usage{
-FigQAmultiRes(x, y, mask, fact=2)
+FigQAmultiRes(x, y, stratum, seqn="geom", nullValue=0)
 }
 
 \arguments{
   \item{x}{
-indicate reference raster layer.  The reference layer is taken as the 'truth' image.
+a RasterLayer object corresponding to the reference map.  The reference layer is taken as the 'truth' image.
 }
   \item{y}{
- indicate predicted raster layer
+a RasterLayer object corresponding to the predicted map
 }
-  \item{mask}{
-indicate raster layer to be used as a mask; this layer defines the strata 
+  \item{stratum}{
+a RasterLayer object defining the strata 
 }
-  \item{fact}{
-indicate the contraction factor to adjust spatial resolution (pixel size) in output image
+  \item{seqn}{
+numeric vector indicating the sequence of contraction factors to adjust spatial resolution (pixel size) a los cuales se calculan los diferentes valores de Quantity Allocation
 }
 }
 \value{
-output image
+Las funciones que generan graficas, como esta, probablemente no van a tener esta seccion de Value
 }
 \seealso{
 See function 
 }
 \examples{
-#data(example_x1)
-#data(example_y1)
-#data(example_mask1)
-#FigQAmultiRes(example_x1, example_y1, example_mask1, fact=2) 
+library(raster)
+example_x1 <- raster(system.file("external/example_x1.rst", package="rAA")) 
+example_y1 <- raster(system.file("external/example_y1.rst", package="rAA")) 
+example_mask1 <- raster(system.file("external/example_mask1.rst", package="rAA")) 
+FigQAmultiRes(example_x1, example_y1, example_mask1, seqn="geom") 
 }
 
-\keyword{ spatial, quantity allocation }
+\keyword{ spatial }
